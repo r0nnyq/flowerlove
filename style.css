@@ -1,0 +1,122 @@
+/* Общие стили для body */
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* Убираем горизонтальную прокрутку */
+  height: 100vh; /* Задаем высоту body, равную высоте окна браузера */
+  font-family: Arial, sans-serif;
+}
+
+/* Контейнер для элементов */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Элементы внутри контейнера */
+.item {
+  flex: 1 1 30%; /* Каждый элемент будет занимать 30% ширины контейнера */
+}
+
+/* Стили для canvas */
+canvas {
+  padding: 0;
+  margin: 0;
+  position: absolute; /* Если канвас используется для анимации, позиционируем его относительно окна */
+  width: 100%; /* Устанавливаем ширину канваса, равную ширине окна */
+  height: 100%;
+}
+
+
+
+@font-face {
+  font-family: 'Bonzai Regular';
+  src: url('Bonzai_Regular.ttf');
+}
+
+.welcome-text {
+  font-family: 'Bonzai Regular';
+  color: rgb(255, 145, 145);
+  font-size: 7vh;
+  text-shadow: rgb(3, 3, 3) 4px 4px 4px;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  margin-top: -10vh;
+  margin-left: 3vh;
+}
+
+
+
+
+
+.reward-btn {
+  width: 120px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 3vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  
+}
+.IconContainer {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.IconContainer svg {
+  width: 50%;
+  z-index: 3;
+}
+.box-top {
+  transition: all 0.3s;
+}
+.text {
+  width: 70px;
+  height: 100%;
+  font-size: 19px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+  font-family: 'Bonzai Regular';
+
+}
+.reward-btn:hover .IconContainer .box-top {
+  transform: translateY(-5px);
+}
+.reward-btn:hover {
+  background-color: rgb(255, 145, 145);
+}
+.reward-btn:hover .coin {
+  transform: translateY(-5px);
+  transition-delay: 0.2s;
+}
+.coin {
+  width: 25%;
+  height: 25%;
+  background-color: #e4d61a;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.3s;
+  z-index: 1;
+  border: 2px solid #ffe956;
+  margin-top: 4px;
+}
